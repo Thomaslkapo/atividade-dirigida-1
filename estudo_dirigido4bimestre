@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <locale.h>
 using namespace std;
@@ -5,10 +6,18 @@ int main(){
     int resposta;
     setlocale(LC_ALL, "Portuguese");
     cout << "Digite o numero do jogo em que deseja participar sendo:" << endl <<"[1]Mega-Sena" << endl << "[2]Quina" << endl << "[3]Lotomania" << endl << "[4]Lotofácil" << endl;
+    cin >> resposta;
+    if(resposta == 1){
+        int aposta;
+        cout << "Na Mega-Sena voce pode fazer no minimo 6 apostas e no maximo 15 apostas " << endl << "sendo assim quantas apostas voce deseja fazer?:" << endl;
+        cin >> aposta;
+        do{
+            cout << "Digite um numero de apostas valido:" << endl;
+            cin >> aposta;
+        }while(aposta < 6 || aposta > 15);
+        
+    }
 
     return 0;
+
 }
-
-
-
-
