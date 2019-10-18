@@ -9,19 +9,56 @@ int main(){
     cin >> resposta;
     if(resposta == 1){
             int geracao, aposta;
-        cout << "Quantas apostas voce deseja gerar?" << endl;
-        cin >> geracao;
+    cout <<"-----------BEM-VINDO Á MEGA-SENA---------------" << endl;
     do{
-        cout << "Digite somente números positivos" << endl;
+    cout << "Quantas apostas voce deseja gerar?(DIGITE SOMENTE NUMEROS POSITIVOS)" << endl;
         cin >> geracao;
     }while(geracao < 1);
-        cout << "Na Mega-Sena voce pode apostar entre 6 e 15 dezenas " << endl << "sendo assim, quantas dezenas voce deseja apostar?:" << endl;
+        do{ cout << "Na Mega-Sena só é permitido apostar entre [6] e [15] dezenas, " << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
         cin >> aposta;
-        do{
-            cout << "Digite um numero de dezenas valido:" << endl;
-            cin >> aposta;
-        }while(aposta < 6 || aposta > 15);
+    }while(aposta < 6 || aposta > 15);
+
+    }if(resposta == 2){
+            int geracao, aposta;
+    cout <<"-----------BEM-VINDO Á QUINA---------------" << endl;
+    do{
+    cout << "Quantas apostas voce deseja gerar?(DIGITE SOMENTE NUMEROS POSITIVOS)" << endl;
+        cin >> geracao;
+    }while(geracao < 1);
+        do{ cout << "Na Quina só é permitido apostar entre [5] e [15] dezenas, " << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
+        cin >> aposta;
+    }while(aposta < 5 || aposta > 15);
+
+    }if(resposta == 3){
+            int geracao, aposta;
+     cout <<"-----------BEM-VINDO Á LOTOMANIA---------------" << endl;
+    do{
+    cout << "Quantas apostas voce deseja gerar?(DIGITE SOMENTE NUMEROS POSITIVOS)" << endl;
+        cin >> geracao;
+    }while(geracao < 1);
+        do{ cout << "Na Lotomania só é permitido apostar [50] dezenas" << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
+        cin >> aposta;
+    }while(aposta < 50 || aposta > 50);
+
+    }if(resposta == 4){
+            int geracao, aposta;
+     cout <<"-----------BEM-VINDO Á LOTOFÁCIL---------------" << endl;
+    do{
+    cout << "Quantas apostas voce deseja gerar?(DIGITE SOMENTE NUMEROS POSITIVOS)" << endl;
+        cin >> geracao;
+    }while(geracao < 1);
+        do{ cout << "Na Lotofácil só é permitido apostar entre [15] e [18] dezenas, " << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
+        cin >> aposta;
+    }while(aposta < 15 || aposta > 18);
 
     }
+return 0;
 
-    return 0;
+}
+
+
+
+
+
+
+
