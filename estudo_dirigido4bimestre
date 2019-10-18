@@ -1,18 +1,14 @@
-
-#include<iostream>
+#include <iostream>
+#include <locale.h>
 using namespace std;
-int main (){
+int main(){
+    int resposta;
+    setlocale(LC_ALL, "Portuguese");
+    cout << "Digite o numero do jogo em que deseja participar sendo:" << endl <<"[1]Mega-Sena" << endl << "[2]Quina" << endl << "[3]Lotomania" << endl << "[4]Lotofácil" << endl;
 
-
-
-
-
-
-
-
-
-
-
-
-return 0;
+    return 0;
 }
+
+
+
+
