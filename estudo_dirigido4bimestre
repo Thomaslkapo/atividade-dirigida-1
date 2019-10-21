@@ -2,13 +2,8 @@
 #include <iostream>
 #include <locale.h>
 using namespace std;
-int main(){
-    int resposta;
-    setlocale(LC_ALL, "Portuguese");
-    cout << "Digite o numero do jogo em que deseja participar sendo:" << endl <<"[1]Mega-Sena" << endl << "[2]Quina" << endl << "[3]Lotomania" << endl << "[4]Lotofácil" << endl;
-    cin >> resposta;
-    if(resposta == 1){
-            int geracao, aposta;
+void Mega_Sena(){
+    int geracao, aposta;
     cout <<"-----------BEM-VINDO Á MEGA-SENA---------------" << endl;
     do{
     cout << "Quantas apostas voce deseja gerar?(DIGITE SOMENTE NUMEROS POSITIVOS)" << endl;
@@ -18,7 +13,9 @@ int main(){
         cin >> aposta;
     }while(aposta < 6 || aposta > 15);
 
-    }if(resposta == 2){
+    }
+
+void Quina(){
             int geracao, aposta;
     cout <<"-----------BEM-VINDO Á QUINA---------------" << endl;
     do{
@@ -29,7 +26,9 @@ int main(){
         cin >> aposta;
     }while(aposta < 5 || aposta > 15);
 
-    }if(resposta == 3){
+    }
+
+ void Lotomania(){
             int geracao, aposta;
      cout <<"-----------BEM-VINDO Á LOTOMANIA---------------" << endl;
     do{
@@ -40,7 +39,9 @@ int main(){
         cin >> aposta;
     }while(aposta < 50 || aposta > 50);
 
-    }if(resposta == 4){
+    }
+
+void Lotofacil(){
             int geracao, aposta;
      cout <<"-----------BEM-VINDO Á LOTOFÁCIL---------------" << endl;
     do{
@@ -52,11 +53,29 @@ int main(){
     }while(aposta < 15 || aposta > 18);
 
     }
-return 0;
 
+
+int main(){
+    int resposta;
+    setlocale(LC_ALL, "Portuguese");
+    cout << "Digite o numero do jogo em que deseja participar sendo:" << endl <<"[1]Mega-Sena" << endl << "[2]Quina" << endl << "[3]Lotomania" << endl << "[4]Lotofácil" << endl;
+    cin >> resposta;
+switch(resposta) {
+            case 1:
+                Mega_Sena();
+                break;
+            case 2:
+                Quina();
+                break;
+            case 3:
+                Lotomania();
+                break;
+            case 4:
+                Lotofacil();
+                break;
+        }
+    return 0;
 }
-
-
 
 
 
