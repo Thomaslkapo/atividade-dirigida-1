@@ -1,7 +1,53 @@
 
 #include <iostream>
 #include <locale.h>
+#include <vector>
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
+ bool repitidos(vector <int> valores, int tamanho, int valor){
+
+        for(int i = 0; i < tamanho; i++){
+
+            if(valores[i] == valor) return true;
+        }
+
+        return false;
+
+    }
+
+    void gerador_aleatorio(int ale_dezenas ,int minimo, int rand_max){
+
+        srand(time(NULL));
+
+        int x;
+        vector <int> numeros;
+
+        for(int i = 0; i < ale_dezenas; i++){
+
+            refazer:
+
+            x = minimo + rand() % rand_max;
+
+            if(!repitidos(numeros, i, x)){
+
+                numeros.push_back(x);
+               }
+            else goto refazer;
+        }
+
+        cout << "Os números selecionados foram: ";
+
+            for(int i = 0; i < ale_dezenas; i++){
+
+                cout << numeros[i] << ", ";
+
+            }
+
+            cout << endl << endl;
+
+    }
 void Mega_Sena(){
     int geracao, aposta;
     cout <<"-----------BEM-VINDO Á MEGA-SENA---------------" << endl;
@@ -12,6 +58,7 @@ void Mega_Sena(){
         do{ cout << "Na Mega-Sena só é permitido apostar entre [6] e [15] dezenas, " << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
         cin >> aposta;
     }while(aposta < 6 || aposta > 15);
+    gerador_aleatorio(aposta, 1,99);
 
     }
 
@@ -25,6 +72,7 @@ void Quina(){
         do{ cout << "Na Quina só é permitido apostar entre [5] e [15] dezenas, " << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
         cin >> aposta;
     }while(aposta < 5 || aposta > 15);
+    gerador_aleatorio(aposta, 1,99);
 
     }
 
@@ -38,6 +86,8 @@ void Quina(){
         do{ cout << "Na Lotomania só é permitido apostar [50] dezenas" << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
         cin >> aposta;
     }while(aposta < 50 || aposta > 50);
+    gerador_aleatorio(aposta, 1,99);
+    cout << "O valor gasto foi o de: R$1,50" << endl;
 
     }
 
