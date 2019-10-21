@@ -4,6 +4,8 @@
 #include <vector>
 #include <time.h>
 #include <stdlib.h>
+#include <algorithm>
+#include <iomanip>
 using namespace std;
  bool repitidos(vector <int> valores, int tamanho, int valor){
 
@@ -39,6 +41,7 @@ using namespace std;
             else goto refazer;
         }
 
+        sort(numeros.begin(), numeros.end());
         cout << "Os números selecionados foram: ";
 
             for(int i = 0; i < ale_dezenas; i++){
@@ -53,6 +56,8 @@ using namespace std;
 void Mega_Sena(){
 
     int geracao, aposta;
+    double lista[] = {  3.50 , 24.50 ,  98.00 ,  294.00 , 735.00 ,  1617.00 ,  3234.00 ,  6006.00 ,  10510.50 ,  17517.50 };
+
 
     cout <<"-----------BEM-VINDO Á MEGA-SENA---------------" << endl;
 
@@ -73,13 +78,16 @@ void Mega_Sena(){
 
     cout << "----------Aposta[" << z << "]---------" << endl << endl;
 
-    gerador_aleatorio(aposta, 1, 100 - z);
+    gerador_aleatorio(aposta, 1, 61 - z);
 
-    string lista[] = { " 3,50 ", " 24,50 ", " 98,00 ", " 294,00 "," 735,00 ", " 1.617,00 ", " 3.234,00 ", " 6.006,00 ", " 10.510,50 ", " 17.517,50 "};
 
-    cout << "O valor gasto foi o de: R$" << lista[aposta -6] << endl << endl;
+    cout << "O valor gasto foi o de: R$" << fixed << setprecision(2) << lista[aposta -6] << endl << endl;
 
     }
+
+    cout << "----------TOTAL----------" << endl << endl;
+    cout << "O valor TOTAL gasto foi o de: R$" << fixed << setprecision(2) << geracao * lista[aposta -6] << endl << endl;
+
 }
 void Quina(){
 
@@ -104,7 +112,7 @@ void Quina(){
 
     cout << "----------Aposta[" << z << "]---------" << endl << endl;
 
-    gerador_aleatorio(aposta, 1, 100 - z);
+    gerador_aleatorio(aposta, 1, 81 - z);
 
     string lista[] = { " 1,50", " 9,00 ", " 31,50 ", " 84,00 ", " 189,00 ", " 378,00 ", " 693,00 ", " 1.188,00 ", " 1.930,50 ", " 3.003,00 ", " 4.504,00 "};
 
@@ -135,7 +143,7 @@ void Quina(){
 
     cout << "----------Aposta[" << z << "]---------" << endl << endl;
 
-    gerador_aleatorio(aposta, 1,100 - z);
+    gerador_aleatorio(aposta, 0, 100 - z);
 
     cout << "O valor gasto foi o de: R$1,50" << endl << endl;
 
@@ -165,7 +173,7 @@ void Lotofacil(){
 
     cout << "----------Aposta[" << z << "]---------" << endl << endl;
 
-    gerador_aleatorio(aposta, 1,100 - z);
+    gerador_aleatorio(aposta, 1, 25 - z);
 
     string lista[]{ " 2,00 ", " 32,00 ", " 272,00 ", " 1.632,00 " };
 
