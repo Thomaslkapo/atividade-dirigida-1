@@ -69,14 +69,18 @@ void Mega_Sena(){
 
         }while(aposta < 6 || aposta > 15);
 
-    gerador_aleatorio(aposta, 1,99);
+    for(int z = 1; z <= geracao ; z++){
 
-     string lista[] = { " 3,50 ", " 24,50 ", " 98,00 ", " 294,00 "," 735,00 ", " 1.617,00 ", " 3.234,00 ", " 6.006,00 ", " 10.510,50 ", " 17.517,50 "};
+    cout << "----------Aposta[" << z << "]---------" << endl << endl;
 
-     cout << "O valor gasto foi o de: R$" << lista[aposta -6] << endl;
+    gerador_aleatorio(aposta, 1, 100 - z);
+
+    string lista[] = { " 3,50 ", " 24,50 ", " 98,00 ", " 294,00 "," 735,00 ", " 1.617,00 ", " 3.234,00 ", " 6.006,00 ", " 10.510,50 ", " 17.517,50 "};
+
+    cout << "O valor gasto foi o de: R$" << lista[aposta -6] << endl << endl;
 
     }
-
+}
 void Quina(){
 
     int geracao, aposta;
@@ -96,13 +100,17 @@ void Quina(){
 
         }while(aposta < 5 || aposta > 15);
 
-    gerador_aleatorio(aposta, 1,99);
+        for(int z = 1; z <= geracao ; z++){
+
+    cout << "----------Aposta[" << z << "]---------" << endl << endl;
+
+    gerador_aleatorio(aposta, 1, 100 - z);
 
     string lista[] = { " 1,50", " 9,00 ", " 31,50 ", " 84,00 ", " 189,00 ", " 378,00 ", " 693,00 ", " 1.188,00 ", " 1.930,50 ", " 3.003,00 ", " 4.504,00 "};
 
-    cout << "O valor gasto foi o de: R$" << lista[aposta -5] << endl;
+    cout << "O valor gasto foi o de: R$" << lista[aposta -5] << endl << endl;
     }
-
+}
  void Lotomania(){
 
     int geracao, aposta;
@@ -117,19 +125,22 @@ void Quina(){
 
         }while(geracao < 1);
 
-
         do{ cout << "Na Lotomania só é permitido apostar [50] dezenas" << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
 
     cin >> aposta;
 
         }while(aposta < 50 || aposta > 50);
 
-    gerador_aleatorio(aposta, 1,99);
+    for(int z = 1; z <= geracao ; z++){
 
-    cout << "O valor gasto foi o de: R$1,50" << endl;
+    cout << "----------Aposta[" << z << "]---------" << endl << endl;
+
+    gerador_aleatorio(aposta, 1,100 - z);
+
+    cout << "O valor gasto foi o de: R$1,50" << endl << endl;
 
     }
-
+ }
 void Lotofacil(){
 
     int geracao, aposta;
@@ -150,14 +161,18 @@ void Lotofacil(){
 
         }while(aposta < 15 || aposta > 18);
 
-    gerador_aleatorio(aposta, 1,99);
+    for(int z = 1; z <= geracao ; z++){
+
+    cout << "----------Aposta[" << z << "]---------" << endl << endl;
+
+    gerador_aleatorio(aposta, 1,100 - z);
 
     string lista[]{ " 2,00 ", " 32,00 ", " 272,00 ", " 1.632,00 " };
 
-    cout << "O valor gasto foi o de: R$" << lista[aposta -15] << endl;
+    cout << "O valor gasto foi o de: R$" << lista[aposta -15] << endl << endl;
     }
 
-
+}
 int main(){
 
     int resposta;
