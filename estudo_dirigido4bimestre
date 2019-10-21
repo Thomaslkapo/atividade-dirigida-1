@@ -101,7 +101,7 @@ void Lotofacil(){
         do{ cout << "Na Lotofácil só é permitido apostar entre [15] e [18] dezenas, " << endl << "sendo assim quantas dezenas voce deseja apostar?:" << endl;
         cin >> aposta;
     }while(aposta < 15 || aposta > 18);
-
+    gerador_aleatorio(aposta, 1,99);
     }
 
 
